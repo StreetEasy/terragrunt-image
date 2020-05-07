@@ -16,7 +16,7 @@ steps:
     build_args:
     - TERRAFORM_VERSION=0.12.24
     - TERRAGRUNT_VERSION=0.23.4
-    targs:
+    tags:
     - latest
     - "0.23.4"
     - "0.23"
