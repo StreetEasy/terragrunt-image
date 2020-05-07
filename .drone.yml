@@ -1,0 +1,28 @@
+kind: pipeline
+name: images
+type: kubernetes
+
+steps:
+- name: build
+  image: plugins/docker
+  environment:
+  settings:
+    purge: false
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+    repo: zillownyc/terragrunt
+    build_args:
+    - TERRAFORM_VERSION=0.12.24
+    - TERRAGRUNT_VERSION=0.23.4
+    targs:
+    - latest
+    - "0.23.4"
+    - "0.23"
+
+trigger:
+  event:
+  - push
+  branch:
+  - master
