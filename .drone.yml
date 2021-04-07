@@ -14,12 +14,12 @@ steps:
       from_secret: docker_password
     repo: zillownyc/terragrunt
     build_args:
-    - TERRAFORM_VERSION=0.12.24
-    - TERRAGRUNT_VERSION=0.23.4
+    - TERRAFORM_VERSION=0.12.30
+    - TERRAGRUNT_VERSION=0.28.18
     tags:
     - latest
-    - "0.23.4"
-    - "0.23"
+    - "0.28.18"
+    - "0.28"
 
 trigger:
   event:
