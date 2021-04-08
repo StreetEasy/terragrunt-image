@@ -18,8 +18,8 @@ steps:
     - TERRAGRUNT_VERSION=0.28.18
     tags:
     - latest
-    - "0.28.18"
-    - "0.28"
+    - "0.28.18_tf0.12.30"
+    - "0.28_tf0.12.30"
 
 trigger:
   event:
