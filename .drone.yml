@@ -5,7 +5,6 @@ type: kubernetes
 steps:
 - name: build
   image: plugins/docker
-  environment:
   settings:
     purge: false
     username:
@@ -14,12 +13,12 @@ steps:
       from_secret: docker_password
     repo: zillownyc/terragrunt
     build_args:
-    - TERRAFORM_VERSION=0.12.30
-    - TERRAGRUNT_VERSION=0.28.18
+    - TERRAFORM_VERSION=0.14.10
+    - TERRAGRUNT_VERSION=0.28.24
     tags:
     - latest
-    - "0.28.18_tf0.12.30"
-    - "0.28_tf0.12.30"
+    - "0.28.24_tf0.14.10"
+    - "0.28_tf0.14.10"
 
 trigger:
   event:
