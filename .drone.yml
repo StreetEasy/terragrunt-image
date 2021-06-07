@@ -15,10 +15,12 @@ steps:
     build_args:
     - TERRAFORM_VERSION=0.14.10
     - TERRAGRUNT_VERSION=0.28.24
+    - AWS_CLI_VERSION=1.18.54
+    - KUBECTL_VERSION=1.18
     tags:
-    - latest
     - "0.28.24_tf0.14.10"
     - "0.28_tf0.14.10"
+    - latest
 
 trigger:
   event:
